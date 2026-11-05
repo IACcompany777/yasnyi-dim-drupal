@@ -1,0 +1,28 @@
+<header class="site-header">
+  <div class="wrap site-header__bar">
+    <a class="brand" href="{{ path('<front>') }}" rel="home">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span>{{ is_english ? 'Yasnyi Dim' : 'Ясний Дім' }}</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">{{ is_english ? 'Menu' : 'Меню' }}</button>
+    <div class="site-header__nav" id="site-menu">
+      {{ page.primary_menu }}
+      {{ page.language }}
+    </div>
+  </div>
+</header>
+
+<main id="main-content" class="site-main">
+  {% if page.highlighted %}
+    <div class="wrap">{{ page.highlighted }}</div>
+  {% endif %}
+  {{ page.content }}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__bar">
+    <p>{{ is_english ? 'Home and office cleaning in Vinnytsia' : 'Прибирання домівок і офісів у Вінниці' }}</p>
+    <p>{{ is_english ? 'Site concept by IAC' : 'Концепт сайту від IAC' }}</p>
+  </div>
+  {{ page.footer }}
+</footer>

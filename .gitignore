@@ -1,0 +1,12 @@
+# Installed by Composer
+/vendor/
+/web/*
+!/web/themes/
+/web/themes/*
+!/web/themes/custom/
+
+# Local only
+ADMIN-LOGIN-LOCAL.txt
+*.sqlite
+*.sqlite-*
+.env
